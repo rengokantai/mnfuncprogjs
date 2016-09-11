@@ -46,3 +46,30 @@ Rx.Observable.fromEvent(document.querySelector(''), 'keyup')
       v => console.log(``)
     );
 ```
+####Chapter 2. Higher-order JavaScript
+#####2.1. Why JavaScript?
+######2.2. Functional vs. object-oriented programming
+object:
+```
+var person = new Student('ke');
+```
+oo:
+```
+get fullName(){
+return this.name;
+}
+```
+func:
+```
+var fullname = person => person.name;
+```
+impl:  
+oo
+```
+person.fullName()
+```
+func:
+```
+fullname(person);
+```
+
