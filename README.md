@@ -20,4 +20,18 @@ The Array.sort function is stateful and causes the side effect of sorting the ar
 ```
 f • g = f(g(x))
 ```
-This formula reads “f composed of g,” which creates a loose, type-safe relationship between g’s return value and f’s argument. 
+This formula reads “f composed of g,” which creates a loose, type-safe relationship between g’s return value and f’s argument.  
+convert old code to RxJS:
+```
+var valid = false;
+var elem = document.querySelector("");
+elem.onkeyup= function(e){
+  var v = elem.value;
+  if(v!==null &&v.length!==0){
+    v =v.replace(/^\s+|\s+$|\-s/g,'');
+    if(v.length===9){
+      valid=true;
+    }
+  }
+}
+```
