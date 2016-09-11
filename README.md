@@ -73,3 +73,6 @@ func:
 fullname(person);
 ```
 
+####Chapter 3. Few data structures, many operations
+######3.3.1. Understanding lambda expressions
+######3.3.3. Gathering results with _.reduce
