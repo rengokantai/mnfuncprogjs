@@ -28,10 +28,21 @@ var elem = document.querySelector("");
 elem.onkeyup= function(e){
   var v = elem.value;
   if(v!==null &&v.length!==0){
-    v =v.replace(/^\s+|\s+$|\-s/g,'');
+    v =v.replace(/^\s+|\s+$|\-/g,'');
     if(v.length===9){
       valid=true;
     }
   }
 }
+```
+RxJS:
+```
+Rx.Observable.fromEvent(document.querySelector(''), 'keyup')
+   .map(input => input.srcElement.value)
+   .filter(v => v !== null && v.length !== 0)
+   .map(v => v.replace(/^\s*|\s*$|\-/g, ''))
+   .skipWhile(v => v.length !== 9)
+   .subscribe(
+      v => console.log(``)
+    );
 ```
